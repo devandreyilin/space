@@ -1,0 +1,9 @@
+@import "../_mixins/font-face";
+
+@include font-face("Roboto", "../fonts/Roboto-Regular", 400);
+@include font-face("Roboto", "../fonts/Roboto-Bold", 700);
+@include font-face("ForgottenNovember", "../fonts/Forgotten-November");
+@include font-face("Monstserrat", "../fonts/Montserrat-Medium", 500);
+@include font-face("Monstserrat", "../fonts/Montserrat-ExtraBold", 800);
+@include font-face("BigNoodleTitlingCyr", "../fonts/10089", 400);
+@include font-face("IntroHeadH", "../fonts/IntroHeadH-Base", 700);
