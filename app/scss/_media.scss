@@ -165,7 +165,6 @@
 
    /*======================= REVIEWS =========================*/
    .s-reviews {
-      padding: 200px 0 130px;
 
       .review-blocks {
          margin: 165px auto 100px;
@@ -230,8 +229,10 @@
 
    /*======================= REVIEWS =========================*/
    .s-reviews {
-      padding: 200px 0 100px;
-
+      padding: 280px 0 100px;
+      &:after {
+         background-size: 450px;
+      }
       .section-title {
          img {
             width: 470px;
@@ -307,6 +308,11 @@
 
    /*======================= REVIEWS =========================*/
    .s-reviews {
+      &:after{
+         background-attachment: scroll;
+         background-position: 120% 103%;
+         background-size: 350px auto;
+      }
       .review-blocks {
          margin: 145px auto 100px;
       }
