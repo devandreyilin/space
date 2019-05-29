@@ -1,27 +1,55 @@
 @import "utils/vars";
 
 
-
 /*==========  Desktop First  ==========*/
 
 
 // ≥1600px
-@media only screen and (max-width:1600px) {
+@media only screen and (max-width: 1600px) {
 
 }
 
 // ≥1400px
-@media only screen and (max-width:1400px) {
+@media only screen and (max-width: 1400px) {
 
 }
 
 // ≥1200px
 @include media-breakpoint-down(lg) {
 
+   /*======================= ADVANTAGES =========================*/
+   .s-advantages {
+      padding: 40px 0;
+
+      &__list {
+         img {
+            max-width: 130px;
+         }
+
+         p {
+            font-size: 39px;
+         }
+      }
+   }
+
+   /*======================= HOW =========================*/
+   .s-how {
+      .section-title {
+         .h2-title {
+            font-size: 41px;
+         }
+
+         img {
+            width: 100%;
+         }
+      }
+   }
+
    /*======================= CONTACTS =========================*/
-   .s-contacts  {
+   .s-contacts {
       .contacts-window {
          width: 440px;
+
          p {
             font-size: 26px;
          }
@@ -30,12 +58,13 @@
 
 
    /*======================= REVIEWS =========================*/
-   .s-reviews  {
+   .s-reviews {
 
-      .section-title  {
+      .section-title {
          img {
             width: 516px;
          }
+
          .h2-title {
             font-size: 53px;
          }
@@ -48,14 +77,17 @@
                left: -17.5%;
             }
          }
+
          &--y {
             &:before {
                top: -23%;
             }
          }
+
          &--right {
             margin-top: 100px;
             transform: rotate(-2deg);
+
             &:before {
                top: -17%;
                right: -21%;
@@ -63,7 +95,7 @@
          }
 
 
-         img {
+         .content {
             width: 310px;
             height: 280px;
          }
@@ -75,26 +107,77 @@
 // ≥992px
 @include media-breakpoint-down(md) {
 
+   /*======================= ADVANTAGES =========================*/
+   .s-advantages {
+      padding: 80px 0 60px;
+
+      &__list {
+         margin-top: 80px;
+
+         img {
+            max-width: 150px;
+         }
+
+         p {
+            font-size: 50px;
+         }
+      }
+   }
+
+   /*======================= HOW =========================*/
+   .s-how {
+      .col-lg-6 {
+         padding-right: 15px;
+
+         &:last-child {
+            padding-left: 15px;
+            padding-right: 15px;
+         }
+      }
+
+      .section-title {
+         .h2-title {
+            font-size: 31px;
+         }
+
+         img {
+            height: 200px;
+         }
+      }
+
+      .slider-block {
+         margin-bottom: 40px;
+      }
+   }
+
    /*======================= CONTACTS =========================*/
-   .s-contacts  {
+   .s-contacts {
       margin-top: -78px;
+
       .row {
          padding: 100px 0 50px;
       }
+
       .contacts-window {
          margin: 0 auto 40px;
       }
    }
 
    /*======================= REVIEWS =========================*/
-   .s-reviews  {
+   .s-reviews {
+      padding: 200px 0 130px;
+
+      .review-blocks {
+         margin: 165px auto 100px;
+      }
+
       .review-block {
          &--right {
             margin-top: 50px;
             transform: rotate(-2deg);
          }
 
-         img {
+         .content {
             width: 270px;
             height: 240px;
          }
@@ -106,13 +189,54 @@
 // ≥768px
 @include media-breakpoint-down(sm) {
 
-   /*======================= REVIEWS =========================*/
-   .s-reviews  {
+   /*======================= ADVANTAGES =========================*/
+   .s-advantages {
+      padding: 80px 0 60px;
 
-      .section-title  {
+      &__list {
+         margin-top: 60px;
+
+         p {
+            font-size: 43px;
+         }
+      }
+   }
+
+   /*======================= HOW =========================*/
+   .s-how {
+      .carousel-how, .embed-responsive {
+         box-shadow: 0 0 15px 8px rgba(37, 234, 226, .8);
+      }
+
+      &__sliders {
+         margin: 80px 0;
+      }
+
+      .section-title {
+         .h2-title {
+            font-size: 31px;
+            text-align: center;
+         }
+
+         img {
+            height: 280px;
+         }
+      }
+
+      .slider-block {
+         margin-bottom: 30px;
+      }
+   }
+
+   /*======================= REVIEWS =========================*/
+   .s-reviews {
+      padding: 200px 0 100px;
+
+      .section-title {
          img {
             width: 470px;
          }
+
          .h2-title {
             font-size: 47px;
          }
@@ -120,19 +244,22 @@
 
       .review-block {
          margin-bottom: 100px;
+
          &--left {
             transform: rotate(2deg);
          }
+
          &--y {
             margin-bottom: 65px;
          }
+
          &--right {
             margin-top: 0;
             margin-bottom: 0;
             transform: rotate(-2deg);
          }
 
-         img {
+         .content {
             width: 300px;
             height: 270px;
          }
@@ -144,12 +271,51 @@
 // ≥576px
 @include media-breakpoint-down(xs) {
 
+   /*======================= ADVANTAGES =========================*/
+   .s-advantages {
+      &__list {
+         img {
+            max-width: 120px;
+         }
+
+         p {
+            font-size: 35px;
+         }
+      }
+   }
+
+   /*======================= HOW =========================*/
+   .s-how {
+      &__sliders {
+         margin: 70px 0 60px;
+      }
+
+      .section-title {
+         .h2-title {
+            font-size: 29px;
+         }
+
+         img {
+            height: 260px;
+         }
+      }
+
+      .slider-block {
+         margin-bottom: 30px;
+      }
+   }
+
    /*======================= REVIEWS =========================*/
-   .s-reviews  {
-      .section-title  {
+   .s-reviews {
+      .review-blocks {
+         margin: 145px auto 100px;
+      }
+
+      .section-title {
          img {
             width: 400px;
          }
+
          .h2-title {
             font-size: 40px;
          }
@@ -158,19 +324,22 @@
 
 
    /*======================= CONTACTS =========================*/
-   .s-contacts  {
+   .s-contacts {
 
       .contacts-window {
          width: 362px;
+
          p {
             font-size: 22px;
             margin-left: -6px;
          }
       }
+
       .social {
          li {
             margin-right: 15px;
          }
+
          a {
             padding: 11px;
          }
@@ -181,15 +350,56 @@
 }
 
 // ≥450px
-@media only screen and (max-width:450px) {
+@media only screen and (max-width: 450px) {
+
+   /*======================= ADVANTAGES =========================*/
+   .s-advantages {
+      padding: 50px 0 20px;
+
+      &__list {
+         li {
+            flex-direction: column;
+            margin-bottom: 30px;
+         }
+
+         img {
+            max-width: 140px;
+         }
+
+         p {
+            font-size: 45px;
+         }
+      }
+   }
+
+   /*======================= HOW =========================*/
+   .s-how {
+      &__sliders {
+         margin: 70px 0 30px;
+      }
+
+      .section-title {
+         .h2-title {
+            font-size: 25px;
+         }
+
+         img {
+            height: 240px;
+         }
+      }
+   }
 
    /*======================= REVIEWS =========================*/
-   .s-reviews  {
+   .s-reviews {
+      .review-blocks {
+         margin: 145px auto 15px;
+      }
 
-      .section-title  {
+      .section-title {
          img {
             width: 350px;
          }
+
          .h2-title {
             font-size: 36px;
          }
@@ -198,37 +408,45 @@
       div[class^=".col-"] {
          padding: 0;
       }
+
       .review-block {
          margin-bottom: 50px;
          width: 274px;
          height: 274px;
+
          &--y {
             transform: rotate(0deg);
+
             &:before {
                top: -29%;
                left: 24%;
             }
+
             &:after {
                bottom: -6%;
                right: -20%;
             }
          }
+
          &--left {
             transform: rotate(0deg);
+
             &:before {
                bottom: -19%;
                left: -23.5%;
             }
          }
+
          &--right {
             transform: rotate(0deg);
+
             &:before {
                top: -21%;
                right: -26%;
             }
          }
 
-         img {
+         .content {
             padding: 12px 12px 42px 12px;
             width: 250px;
             height: 220px;
@@ -237,8 +455,9 @@
    }
 
 }
+
 // ≥400px
-@media only screen and (max-width:400px) {
+@media only screen and (max-width: 400px) {
 
    /*======================= REVIEWS =========================*/
    .s-reviews {
@@ -256,29 +475,120 @@
    }
 
    /*======================= CONTACTS =========================*/
-   .s-contacts  {
+   .s-contacts {
       .order-1 {
          padding: 0;
       }
+
       .contacts-window {
          width: 310px;
+
          p {
             font-size: 19px;
          }
       }
+
       .social {
          flex-wrap: wrap;
+
          li {
             margin: 10px;
+
             &:last-child {
                margin: 10px;
             }
          }
+
          a {
             padding: 16px;
          }
+
          .w-100 {
             display: block;
+         }
+      }
+   }
+
+}
+
+// ≥380px
+@media only screen and (max-width: 380px) {
+
+   .s-advantages {
+      padding: 50px 0 20px;
+
+      &__list {
+         img {
+            max-width: 140px;
+         }
+
+         p {
+            font-size: 36px;
+         }
+      }
+   }
+
+   /*======================= HOW =========================*/
+   .s-how {
+      &__sliders {
+         margin: 70px 0 30px;
+      }
+
+      .section-title {
+         .h2-title {
+            font-size: 21px;
+         }
+
+         img {
+            height: 220px;
+         }
+      }
+   }
+
+   /*======================= REVIEWS =========================*/
+   .s-reviews {
+
+      .review-block {
+         margin-bottom: 50px;
+         width: 254px;
+         height: 254px;
+
+         &--y {
+            transform: rotate(0deg);
+
+            &:before {
+               top: -29%;
+               left: 24%;
+            }
+
+            &:after {
+               bottom: -6%;
+               right: -20%;
+            }
+         }
+
+         &--left {
+            transform: rotate(0deg);
+
+            &:before {
+               bottom: -19%;
+               left: -23.5%;
+            }
+         }
+
+         &--right {
+            transform: rotate(0deg);
+
+            &:before {
+               top: -21%;
+               right: -26%;
+            }
+         }
+
+         .content {
+            padding: 12px 12px 42px 12px;
+            width: 230px;
+            height: 200px;
          }
       }
    }
@@ -305,5 +615,5 @@
 
 // ≤1200px
 @include media-breakpoint-up(xl) {
-	
+
 }
