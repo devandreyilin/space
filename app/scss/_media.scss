@@ -4,15 +4,105 @@
 /*==========  Desktop First  ==========*/
 
 
-// ≥1600px
-@media only screen and (max-width: 1600px) {
+// ≥1700px
+@media only screen and (max-width: 1700px) {
+
+   /*======================= HEADER =========================*/
+   .header {
+      &-callback {
+         margin-right: 0;
+         height: 280px;
+         width: 657px;
+         padding: 0 20px 0 48px;
+
+         .astronaut {
+            width: 128px;
+            height: 157px;
+         }
+      }
+
+      .main-caption {
+         margin-left: -2%;
+         .img-wrap {
+            width: 640px;
+         }
+
+         &__extra {
+            top: 75%;
+            right: 6%;
+         }
+      }
+      &-composition {
+         .fly {
+            top: 105%;
+            left: 6%;
+         }
+      }
+   }
 
 }
 
 // ≥1400px
 @media only screen and (max-width: 1400px) {
 
+   /*======================= HEADER =========================*/
+   .header {
+      .main-caption {
+         margin-left: 0%;
+      }
+   }
+
 }
+
+// ≥1300px
+@media only screen and (max-width: 1300px) {
+
+   /*======================= HEADER =========================*/
+   .header {
+      &-callback {
+         margin-right: 0;
+         margin-left: 80px;
+         height: 280px;
+         width: 555px;
+
+         .d-flex {
+            .astronaut {
+               display: inline-block;
+            }
+         }
+
+         .astronaut {
+            display: none;
+            width: 100px;
+            height: 122px;
+         }
+      }
+
+      &-composition {
+         .fly {
+            top: 110%;
+            left: 0;
+         }
+      }
+
+      .main-caption {
+         transform: translateY(-35%);
+
+         .img-wrap {
+            width: 500px;
+         }
+
+         &__extra {
+            font-size: 54px;
+            top: 72%;
+            right: 3%;
+         }
+      }
+
+   }
+
+}
+
 
 // ≥1200px
 @include media-breakpoint-down(lg) {
@@ -104,12 +194,109 @@
 
 }
 
+// ≥1150px
+@media only screen and (max-width: 1150px) {
+
+   /*======================= HEADER =========================*/
+   .header {
+      .navbar  {
+         .navbar-brand img {
+            width: 235px;
+            height: 55px;
+         }
+
+         .nav-item {
+            margin-right: 25px;
+         }
+      }
+
+      &-composition {
+         height: calc(100% - 106px);
+         .fly {
+            left: 4%;
+         }
+      }
+
+      &-callback {
+         margin-left: auto;
+      }
+
+      .main-caption {
+         transform: translateY(-50%);
+         margin-right: -73px;
+
+         .img-wrap {
+            width: 500px;
+         }
+
+         &__extra {
+            font-size: 50px;
+            top: 71%;
+            right: 4%;
+         }
+      }
+   }
+
+}
+
 // ≥992px
 @include media-breakpoint-down(md) {
 
+
+   /*======================= HEADER =========================*/
+   .header {
+      height: 100%;
+      .navbar {
+         .navbar-brand  {
+            margin-bottom: 30px;
+            img {
+               width: 235px;
+               height: 55px;
+            }
+         }
+
+         .navbar-toggler {
+            margin-bottom: 30px;
+         }
+
+         .nav-item {
+            margin-right: 0px;
+
+            &:hover {
+               a {
+                  opacity: 1;
+
+                  &:after {
+                     transform: translateY(5px) scale(0);
+                  }
+               }
+            }
+         }
+      }
+
+      &-callback {
+         margin: auto;
+      }
+
+      &-composition {
+         flex-direction: column;
+      }
+
+      .main-caption {
+         transform: translateY(0%);
+         margin-right: 0;
+         margin-bottom: 210px;
+         margin-top: 40px;
+         .img-wrap {
+            width: 570px;
+         }
+      }
+   }
+
+
    /*======================= ADVANTAGES =========================*/
    .s-advantages {
-      padding: 80px 0 60px;
+      padding: 100px 0 60px;
 
       &__list {
          margin-top: 80px;
@@ -229,10 +416,12 @@
 
    /*======================= REVIEWS =========================*/
    .s-reviews {
-      padding: 280px 0 100px;
+      padding: 240px 0 100px;
+
       &:after {
          background-size: 450px;
       }
+
       .section-title {
          img {
             width: 470px;
@@ -281,6 +470,9 @@
 
          p {
             font-size: 35px;
+            img {
+               width: 286px;
+            }
          }
       }
    }
@@ -293,7 +485,7 @@
 
       .section-title {
          .h2-title {
-            font-size: 29px;
+            font-size: 30px;
          }
 
          img {
@@ -308,11 +500,12 @@
 
    /*======================= REVIEWS =========================*/
    .s-reviews {
-      &:after{
+      &:after {
          background-attachment: scroll;
          background-position: 120% 103%;
          background-size: 350px auto;
       }
+
       .review-blocks {
          margin: 145px auto 100px;
       }
@@ -373,7 +566,10 @@
          }
 
          p {
-            font-size: 45px;
+            font-size: 40px;
+            img {
+               width: 322px;
+            }
          }
       }
    }
@@ -530,6 +726,9 @@
 
          p {
             font-size: 36px;
+            img {
+               width: 295px;
+            }
          }
       }
    }

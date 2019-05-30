@@ -114,8 +114,7 @@ header, section {
 
 .flex-in-wrap-center {
    display: flex;
-   margin: auto;
-   margin-left: 0;
+   height: 100%;
 }
 
 .btn {
@@ -179,19 +178,106 @@ header, section {
 
 }
 
+@keyframes brightness {
+   from {
+      opacity: .7;
+   }
+   to {
+      opacity: 1;
+   }
+
+}
+
+.navbar-toggler>.close {
+   display:inline;
+}
+.navbar-toggler.collapsed>.close, .navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
+   display:none;
+}
+
+
+.scene {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   overflow: hidden;
+   right: 0;
+   border-bottom: 100px;
+   height: 100%;
+   z-index: 1;
+   > div {
+      position: absolute;
+      bottom: 0;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center;
+   }
+   .object-1 {
+      width: 136px;
+      height: 89px;
+      top: 15%;
+      left: 7%;
+      background-image: url('../img/elements/header/object-1.png');
+   }
+   .object-2 {
+      width: 53px;
+      height: 53px;
+      top: 27%;
+      left: 20%;
+      background-image: url('../img/elements/header/object-2.png');
+   }
+   .object-3 {
+       width: 127px;
+       height: 187px;
+       top: 13%;
+       left: 31%;
+       background-image: url('../img/elements/header/object-3.png');
+    }
+   .object-4 {
+      width: 97px;
+      height: 116px;
+      top: 20%;
+      left: 47%;
+      background-image: url('../img/elements/header/object-4.png');
+   }
+   .object-5 {
+      width: 88px;
+      height: 96px;
+      top: 36%;
+      left: 64%;
+      background-image: url('../img/elements/header/object-5.png');
+   }
+   .object-6 {
+      width: 84px;
+      height: 65px;
+      top: 13%;
+      left: 90%;
+      background-image: url('../img/elements/header/object-6.png');
+   }
+}
+
+
 
 /*======================= HEADER =========================*/
 .header {
    overflow: hidden;
-   min-height: 950px;
+   min-height: 720px;
    height: 100vh;
    width: 100vw;
    max-width: 100%;
-
-   .container {
-      position: relative;
+   &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-position: 80% 80%;
+      background-attachment: revert;
+      background-size: 382px 718px;
+      background-repeat: no-repeat;
+      background-image: url('../img/elements/header/rocket.png');
    }
-
 
    .top-wrap {
       position: relative;
@@ -199,6 +285,7 @@ header, section {
       left: 0;
       width: 100vw;
       padding: .3em 1em;
+      z-index: 5;
 
       .top {
          display: flex;
@@ -212,6 +299,17 @@ header, section {
    }
 
    .navbar {
+      .navbar-toggler {
+         background: #e8e8e8;
+         position: relative;
+         width: 56px;
+         height: 40px;
+         .close {
+            width: 100%;
+            font-weight: 400;
+            font-size: 27px;
+         }
+      }
       .navbar-brand {
          img {
             width: 271px;
@@ -229,6 +327,7 @@ header, section {
          &:hover {
             a {
                opacity: 1;
+               color: $white;
 
                &:after {
                   transform: translateY(5px) scale(1);
@@ -259,26 +358,45 @@ header, section {
    }
 
    .main-caption {
+      position: relative;
+      margin: auto;
+      margin-left: -5%;
+      transform: translateY(-115px);
+      .img-wrap {
+         display: flex;
+         width: 700px;
+         height: auto;
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+         }
+      }
       img {
          user-select: none;
       }
 
-      margin-left: -15%;
-      position: relative;
-      transform: translateY(-40px);
+
 
       &__extra {
          position: absolute;
-         top: 53%;
-         right: 19%;
-         width: 380px;
+         font-family: "ForgottenNovember" ,sans-serif;
+         top: 73%;
+         right: 4%;
+         font-size: 63px;
+         white-space: nowrap;
+         color: #fff;
+         margin: 0;
       }
    }
 
    &-composition {
+      height: calc(100% - 115px);
+      z-index: 4;
       .fly {
          position: absolute;
-         top: 69%;
+         top: 106%;
          left: 12%;
          transition: .3s;
 
@@ -290,21 +408,30 @@ header, section {
    }
 
    &-callback {
-      margin-top: -70px;
+      margin-top: auto;
+      margin-bottom: 30px;
       margin-right: -200px;
       z-index: 4;
       position: relative;
       display: flex;
-      padding: 0 20px 0 45px;
-      width: 730px;
-      height: 327px;
+      padding: 0 20px 0 50px;
+      width: 670px;
+      height: 300px;
       background-image: url('../img/bg/header-callback.png');
       background-repeat: no-repeat;
       background-position: center;
       background-size: 100% 100%;
 
+      .d-flex {
+         .astronaut {
+            display: none;
+         }
+      }
+
+
       .astronaut {
-         width: 155px;
+         width: 135px;
+         height: 165px;
          margin: auto;
       }
 
@@ -325,7 +452,7 @@ header, section {
                border: none;
                padding: 10px;
                color: #8c8b88;
-               font-size: 19px;
+               font-size: 17px;
                font-weight: 300;
                margin-bottom: 10px;
                opacity: .9;
@@ -340,7 +467,7 @@ header, section {
       &__text {
          color: #000036;
          font-family: "BigNoodleTitlingCyr", sans-serif;
-         font-size: 43px;
+         font-size: 39px;
          font-weight: 800;
          line-height: 1;
          text-transform: uppercase;
@@ -378,10 +505,14 @@ header, section {
             justify-content: center;
             align-items: center;
             fill: red;
+
          }
       }
 
       .btn-order {
+         animation: brightness .7s infinite;
+         animation-direction: alternate;
+         animation-timing-function: linear;
          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
          position: relative;
          background: linear-gradient(135deg, rgba(253, 198, 35, 1) 0%, rgba(250, 132, 23, 1) 100%);
@@ -389,14 +520,21 @@ header, section {
          display: flex;
          justify-content: center;
          align-items: center;
+         opacity: .9;
          padding: 12px;
          padding-right: 62px;
          border-radius: 24px;
+         transition: .3s;
+         &:hover {
+            opacity: 1;
+            box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.4);
+            animation-play-state: paused;
+         }
 
          > span {
             color: #000000;
             font-family: "IntroHeadH", sans-serif;
-            font-size: 19px;
+            font-size: 17px;
             font-weight: 800;
             text-transform: uppercase;
             line-height: 0.8;
