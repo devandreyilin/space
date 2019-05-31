@@ -4,15 +4,83 @@
 /*==========  Desktop First  ==========*/
 
 
-// ≥1700px
-@media only screen and (max-width: 1700px) {
+// ≥1600px
+@media only screen and (max-width: 1600px) {
+
+   .scene {
+
+      .object-1 {
+         top: 13%;
+         left: 1%;
+      }
+
+      .object-2 {
+         display: none;
+      }
+
+      .object-3 {
+         top: 11%;
+         left: 23.5%;
+      }
+
+      .object-4 {
+         top: 17%;
+         left: 49%;
+      }
+
+      .object-5 {
+         display: none;
+      }
+
+      .object-6 {
+
+      }
+
+      .object-7 {
+         width: 87px;
+         height: 48px;
+         top: 32%;
+         left: 46%;
+      }
+
+      .object-8 {
+         width: 69px;
+         height: 72px;
+         top: 54%;
+         left: 47%;
+      }
+
+      .object-9 {
+         width: 123px;
+         height: 95px;
+         left: 38%;
+      }
+
+      .object-10 {
+         width: 300px;
+         height: 170px;
+         top: 77%;
+         left: 1%;
+      }
+
+      .object-11 {
+         width: 320px;
+         height: 590px;
+         bottom: 5%;
+         left: 60%;
+      }
+   }
 
    /*======================= HEADER =========================*/
    .header {
+      &:before {
+         background-size: 542px 469px;
+      }
+
       &-callback {
          margin-right: 0;
          height: 280px;
-         width: 657px;
+         width: 685px;
          padding: 0 20px 0 48px;
 
          .astronaut {
@@ -23,6 +91,7 @@
 
       .main-caption {
          margin-left: -2%;
+
          .img-wrap {
             width: 640px;
          }
@@ -32,6 +101,7 @@
             right: 6%;
          }
       }
+
       &-composition {
          .fly {
             top: 105%;
@@ -50,6 +120,10 @@
       .main-caption {
          margin-left: 0%;
       }
+
+      &-callback {
+         transform: translateX(-30px);
+      }
    }
 
 }
@@ -57,13 +131,23 @@
 // ≥1300px
 @media only screen and (max-width: 1300px) {
 
+   .scene {
+      .object-10 {
+         left: 0;
+         top: 76%;
+         width: 270px;
+         height: 150px;
+      }
+   }
+
    /*======================= HEADER =========================*/
    .header {
       &-callback {
          margin-right: 0;
          margin-left: 80px;
          height: 280px;
-         width: 555px;
+         width: 585px;
+         transform: translateX(0);
 
          .d-flex {
             .astronaut {
@@ -107,9 +191,75 @@
 // ≥1200px
 @include media-breakpoint-down(lg) {
 
+   .scene {
+      .object-3 {
+         top: 11%;
+         left: 44.5%;
+      }
+
+      .object-4 {
+         top: 16%;
+         left: 66%;
+      }
+   }
+
+   /*======================= HEADER =========================*/
+   .header {
+      height: 100%;
+
+      .navbar {
+         .navbar-brand {
+            margin-bottom: 30px;
+
+            img {
+               width: 235px;
+               height: 55px;
+            }
+         }
+
+         .navbar-toggler {
+            margin-bottom: 30px;
+         }
+
+         .nav-item {
+            margin-right: 30px;
+
+            &:hover {
+               a {
+                  opacity: 1;
+
+                  &:after {
+                     transform: translateY(5px) scale(0);
+                  }
+               }
+            }
+         }
+      }
+
+      &-callback {
+         margin: auto;
+      }
+
+      &-composition {
+         flex-direction: column;
+      }
+
+      .main-caption {
+         transform: translateY(0%);
+         margin-right: 0;
+         margin-bottom: 210px;
+         margin-top: 100px;
+
+         .img-wrap {
+            width: 570px;
+         }
+      }
+   }
+
+
    /*======================= ADVANTAGES =========================*/
    .s-advantages {
-      padding: 40px 0;
+      padding: 120px 0 80px;
 
       &__list {
          img {
@@ -194,61 +344,32 @@
 
 }
 
-// ≥1150px
-@media only screen and (max-width: 1150px) {
-
-   /*======================= HEADER =========================*/
-   .header {
-      .navbar  {
-         .navbar-brand img {
-            width: 235px;
-            height: 55px;
-         }
-
-         .nav-item {
-            margin-right: 25px;
-         }
-      }
-
-      &-composition {
-         height: calc(100% - 106px);
-         .fly {
-            left: 4%;
-         }
-      }
-
-      &-callback {
-         margin-left: auto;
-      }
-
-      .main-caption {
-         transform: translateY(-50%);
-         margin-right: -73px;
-
-         .img-wrap {
-            width: 500px;
-         }
-
-         &__extra {
-            font-size: 50px;
-            top: 71%;
-            right: 4%;
-         }
-      }
-   }
-
-}
-
 // ≥992px
 @include media-breakpoint-down(md) {
+
+   .scene {
+      .object-4, .object-7 {
+         display: none;
+      }
+
+      .object-2 {
+         display: block;
+      }
+
+      .object-3 {
+         transition: 1s;
+      }
+   }
 
 
    /*======================= HEADER =========================*/
    .header {
       height: 100%;
+
       .navbar {
-         .navbar-brand  {
+         .navbar-brand {
             margin-bottom: 30px;
+
             img {
                width: 235px;
                height: 55px;
@@ -261,6 +382,11 @@
 
          .nav-item {
             margin-right: 0px;
+
+            .nav-link {
+               font-size: 19px;
+               font-weight: 700;
+            }
 
             &:hover {
                a {
@@ -286,7 +412,8 @@
          transform: translateY(0%);
          margin-right: 0;
          margin-bottom: 210px;
-         margin-top: 40px;
+         margin-top: 100px;
+
          .img-wrap {
             width: 570px;
          }
@@ -375,6 +502,70 @@
 // ≥768px
 @include media-breakpoint-down(sm) {
 
+   .scene {
+      .object-6 {
+         display: none;
+      }
+
+      .object-1 {
+         top: 19%;
+         left: -5%;
+      }
+   }
+   /*======================= HEADER =========================*/
+   .header {
+      &-composition {
+         .fly {
+            left: 9%;
+         }
+      }
+
+      &-callback {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-content: center;
+         height: 440px;
+         width: 385px;
+         background-image: url('../img/bg/header-callback-mobile.png');
+         background-size: 100% 100%;
+         padding: 0 20px;
+
+         &__text {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+         }
+
+         .btn-order > span > span {
+            display: block;
+            margin-top: 4px;
+         }
+
+         &__form-wrap {
+            margin: 0 auto;
+
+            form {
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-content: center;
+            }
+         }
+
+         .btn-order {
+            margin: 25px auto 0;
+
+         }
+      }
+
+      .d-flex {
+         .astronaut, .spaceship {
+            display: none;
+         }
+      }
+   }
+
    /*======================= ADVANTAGES =========================*/
    .s-advantages {
       padding: 80px 0 60px;
@@ -461,8 +652,46 @@
 // ≥576px
 @include media-breakpoint-down(xs) {
 
+   header, section {
+      background-attachment: scroll !important;
+
+      &:before, &:after {
+         background-attachment: scroll !important;
+      }
+   }
+   .scene {
+      .object-3 {
+         left: 40.5%;
+      }
+      .object-1 {
+         display: none;
+      }
+   }
+   /*======================= HEADER =========================*/
+   .header {
+      .main-caption {
+         margin-bottom: 260px;
+         &:before {
+            top: -11.5%;
+            left: 25%;
+            width: 221px;
+            height: 130px;
+         }
+
+         .img-wrap {
+            width: 430px;
+         }
+      }
+      &-composition  {
+         .fly {
+            top: 135%;
+         }
+      }
+   }
+
    /*======================= ADVANTAGES =========================*/
    .s-advantages {
+      padding: 120px 0 60px;
       &__list {
          img {
             max-width: 120px;
@@ -470,6 +699,7 @@
 
          p {
             font-size: 35px;
+
             img {
                width: 286px;
             }
@@ -503,7 +733,7 @@
       &:after {
          background-attachment: scroll;
          background-position: 120% 103%;
-         background-size: 350px auto;
+         background-size: 350px;
       }
 
       .review-blocks {
@@ -551,6 +781,36 @@
 // ≥450px
 @media only screen and (max-width: 450px) {
 
+   .btn-blue {
+      padding: 9px 35px;
+      font-size: 28px;
+   }
+
+   /*======================= HEADER =========================*/
+   .header  {
+      .main-caption  {
+         .img-wrap {
+            width: 390px;
+         }
+         &__extra {
+            font-size: 47px;
+            top: 73%;
+            right: 5%;
+         }
+      }
+      &-composition {
+         .fly {
+            top: 142%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+      }
+      &-callback {
+         width: 375px;
+      }
+   }
+
    /*======================= ADVANTAGES =========================*/
    .s-advantages {
       padding: 50px 0 20px;
@@ -567,6 +827,7 @@
 
          p {
             font-size: 40px;
+
             img {
                width: 322px;
             }
@@ -716,6 +977,47 @@
 // ≥380px
 @media only screen and (max-width: 380px) {
 
+   .btn-blue {
+      padding: 9px 30px;
+      font-size: 22px;
+   }
+
+   /*======================= HEADER =========================*/
+   .header  {
+      .navbar .navbar-brand img {
+         width: 175px;
+         height: 43px;
+      }
+      .main-caption {
+
+         &:before {
+            display: none;
+         }
+         .img-wrap {
+            width: 330px;
+            margin: auto;
+         }
+         &__extra {
+            font-size: 41px;
+            top: 75%;
+            right: 5%;
+         }
+      }
+      &-callback {
+         width: 315px;
+         &__form-wrap form {
+            width: 93%;
+         }
+      }
+      .header-composition .fly {
+         top: 160%;
+         img {
+            transform: translate(-12px,-75px);
+         }
+      }
+
+   }
+
    .s-advantages {
       padding: 50px 0 20px;
 
@@ -726,6 +1028,7 @@
 
          p {
             font-size: 36px;
+
             img {
                width: 295px;
             }

@@ -64,6 +64,10 @@ a {
    &:hover {
       text-decoration: none;
    }
+   &:active, &:focus {
+      border: none;
+      outline: none;
+   }
 }
 
 
@@ -91,8 +95,6 @@ header, section {
    background-position: top center;
    background-size: cover;
 }
-
-
 
 
 .footer {
@@ -188,11 +190,12 @@ header, section {
 
 }
 
-.navbar-toggler>.close {
-   display:inline;
+.navbar-toggler > .close {
+   display: inline;
 }
-.navbar-toggler.collapsed>.close, .navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
-   display:none;
+
+.navbar-toggler.collapsed > .close, .navbar-toggler:not(.collapsed) > .navbar-toggler-icon {
+   display: none;
 }
 
 
@@ -202,9 +205,9 @@ header, section {
    left: 0;
    overflow: hidden;
    right: 0;
-   border-bottom: 100px;
    height: 100%;
-   z-index: 1;
+   z-index: 4;
+
    > div {
       position: absolute;
       bottom: 0;
@@ -212,6 +215,7 @@ header, section {
       background-size: 100% 100%;
       background-position: center;
    }
+
    .object-1 {
       width: 136px;
       height: 89px;
@@ -219,6 +223,7 @@ header, section {
       left: 7%;
       background-image: url('../img/elements/header/object-1.png');
    }
+
    .object-2 {
       width: 53px;
       height: 53px;
@@ -226,13 +231,15 @@ header, section {
       left: 20%;
       background-image: url('../img/elements/header/object-2.png');
    }
+
    .object-3 {
-       width: 127px;
-       height: 187px;
-       top: 13%;
-       left: 31%;
-       background-image: url('../img/elements/header/object-3.png');
-    }
+      width: 127px;
+      height: 187px;
+      top: 13%;
+      left: 31%;
+      background-image: url('../img/elements/header/object-3.png');
+   }
+
    .object-4 {
       width: 97px;
       height: 116px;
@@ -240,6 +247,7 @@ header, section {
       left: 47%;
       background-image: url('../img/elements/header/object-4.png');
    }
+
    .object-5 {
       width: 88px;
       height: 96px;
@@ -247,6 +255,7 @@ header, section {
       left: 64%;
       background-image: url('../img/elements/header/object-5.png');
    }
+
    .object-6 {
       width: 84px;
       height: 65px;
@@ -254,17 +263,53 @@ header, section {
       left: 90%;
       background-image: url('../img/elements/header/object-6.png');
    }
+   .object-7 {
+      width: 87px;
+      height: 48px;
+      top: 32%;
+      left: 41%;
+      background-image: url('../img/elements/header/object-7.png');
+   }
+   .object-8 {
+      width: 69px;
+      height: 72px;
+      top: 53%;
+      left: 53%;
+      background-image: url('../img/elements/header/object-8.png');
+   }
+   .object-9 {
+      width: 156px;
+      height: 120px;
+      top: 75%;
+      left: 44%;
+      background-image: url('../img/elements/header/object-9.png');
+   }
+   .object-10 {
+      width: 377px;
+      height: 216px;
+      top: 75%;
+      left: 3%;
+      background-image: url('../img/elements/header/object-10.png');
+   }
+   .object-11 {
+      width: 382px;
+      height: 718px;
+      bottom: 5%;
+      left: 60%;
+      z-index: 2;
+      background-image: url('../img/elements/header/rocket.png');
+   }
 }
-
 
 
 /*======================= HEADER =========================*/
 .header {
    overflow: hidden;
-   min-height: 720px;
+   min-height: 750px;
    height: 100vh;
    width: 100vw;
    max-width: 100%;
+
    &:after {
       content: '';
       position: absolute;
@@ -272,11 +317,24 @@ header, section {
       left: 0;
       width: 100%;
       height: 100%;
-      background-position: 80% 80%;
-      background-attachment: revert;
-      background-size: 382px 718px;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: cover;
       background-repeat: no-repeat;
-      background-image: url('../img/elements/header/rocket.png');
+      background-image: url('../img/bg/header-space.png');
+   }
+   &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-position: bottom right;
+      background-size:  775px 670px;
+      background-repeat: no-repeat;
+      background-image: url('../img/elements/header/green-planet.png');
    }
 
    .top-wrap {
@@ -304,12 +362,15 @@ header, section {
          position: relative;
          width: 56px;
          height: 40px;
+         margin-left: auto;
+
          .close {
             width: 100%;
             font-weight: 400;
             font-size: 27px;
          }
       }
+
       .navbar-brand {
          img {
             width: 271px;
@@ -361,11 +422,27 @@ header, section {
       position: relative;
       margin: auto;
       margin-left: -5%;
-      transform: translateY(-115px);
+      transform: translateY(-95px);
+
+      &:before {
+         display: block;
+         content: '';
+         position: absolute;
+         top: -12%;
+         left: 27%;
+         width: 316px;
+         height: 186px;
+         background-image: url('../img/elements/header/fireworks.png');
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;
+      }
+
       .img-wrap {
          display: flex;
          width: 700px;
          height: auto;
+
          img {
             width: 100%;
             height: 100%;
@@ -373,15 +450,15 @@ header, section {
             object-position: top center;
          }
       }
+
       img {
          user-select: none;
       }
 
 
-
       &__extra {
          position: absolute;
-         font-family: "ForgottenNovember" ,sans-serif;
+         font-family: "ForgottenNovember", sans-serif;
          top: 73%;
          right: 4%;
          font-size: 63px;
@@ -394,6 +471,7 @@ header, section {
    &-composition {
       height: calc(100% - 115px);
       z-index: 4;
+
       .fly {
          position: absolute;
          top: 106%;
@@ -415,7 +493,7 @@ header, section {
       position: relative;
       display: flex;
       padding: 0 20px 0 50px;
-      width: 670px;
+      width: 690px;
       height: 300px;
       background-image: url('../img/bg/header-callback.png');
       background-repeat: no-repeat;
@@ -446,7 +524,7 @@ header, section {
          padding: 0 15px;
 
          form {
-            margin-top: 20px;
+            margin: 20px auto 0;
 
             input {
                border: none;
@@ -525,6 +603,7 @@ header, section {
          padding-right: 62px;
          border-radius: 24px;
          transition: .3s;
+
          &:hover {
             opacity: 1;
             box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.4);
@@ -709,6 +788,7 @@ header, section {
    margin-top: -140px;
    z-index: 1;
    background-position: center;
+   background-attachment: fixed;
 
    &:after {
       position: absolute;
