@@ -768,7 +768,6 @@ header, section {
 
 .wrapper-plot-price {
    position: relative;
-   overflow-x: hidden;
    background-position: bottom center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -794,7 +793,7 @@ header, section {
 
 /*======================= PRICE =========================*/
 .s-price {
-   padding: 250px 0 130px;
+   padding: 250px 0;
    display: flex;
    justify-content: center;
 

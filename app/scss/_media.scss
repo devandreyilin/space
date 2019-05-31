@@ -8,7 +8,6 @@
 @media only screen and (max-width: 1600px) {
 
 
-
    /*======================= HEADER =========================*/
    .header {
       &:before {
@@ -128,11 +127,74 @@
       }
    }
 
+   /*======================= PRICE =========================*/
+   .s-price {
+
+      .scene .object-2 {
+         top: 18%;
+      }
+
+      .section-content {
+         margin-top: 120px;
+      }
+
+      .island-block {
+         transform: scale(0.7);
+         margin: auto 0 auto auto;
+      }
+
+
+      .slider-wrap {
+         height: 585px;
+         width: 740px;
+      }
+
+      .price-slider {
+         padding: 0 105px;
+         margin-left: 90px;
+
+         &__order-btn {
+            bottom: -9%;
+
+            span {
+               font-size: 33px;
+            }
+         }
+
+
+         &__captions {
+            top: 3%;
+            left: -12.5%;
+         }
+
+         .carousel-item {
+            .h3-title {
+               font-size: 32px;
+            }
+
+            &__extra {
+               font-size: 14px;
+            }
+
+            .color p {
+               font-size: 18px;
+            }
+         }
+
+         &__value {
+            width: 215px;
+
+            span {
+               font-size: 35px;
+            }
+         }
+      }
+   }
+
 }
 
 // ≥1300px
 @media only screen and (max-width: 1300px) {
-
 
 
    /*======================= HEADER =========================*/
@@ -273,6 +335,71 @@
 
          p {
             font-size: 39px;
+         }
+      }
+   }
+
+   /*======================= PRICE =========================*/
+   .s-price {
+      .scene {
+         .object-1 {
+            top: 25%;
+            left: 3%;
+         }
+
+         .object-2 {
+            top: 8%;
+         }
+
+         .object-3 {
+            top: 18%;
+            left: 80%;
+            width: 263px;
+            height: 345px;
+         }
+
+         .object-5 {
+            top: 92%;
+            left: 64%;
+         }
+
+         .object-6 {
+            top: 86%;
+            left: 83%;
+         }
+      }
+
+      .island-wrap {
+         width: 400px;
+      }
+
+      .island-block {
+         margin: auto 0 100px -50px;
+      }
+
+
+      .slider-wrap {
+         height: 575px;
+         width: 600px;
+      }
+
+      .price-slider {
+         padding: 0 100px;
+         margin-left: 0px;
+
+         .carousel-item {
+            .color p {
+               font-size: 17px;
+            }
+         }
+
+         &__captions {
+            transform: scale(0.9);
+            left: -18.5%;
+         }
+
+         &__value {
+            top: 4%;
          }
       }
    }
@@ -675,6 +802,7 @@
          .object-3 {
             left: 40.5%;
          }
+
          .object-1 {
             display: none;
          }
@@ -682,6 +810,7 @@
 
       .main-caption {
          margin-bottom: 260px;
+
          &:before {
             top: -11.5%;
             left: 25%;
@@ -693,7 +822,8 @@
             width: 430px;
          }
       }
-      &-composition  {
+
+      &-composition {
          .fly {
             top: 135%;
          }
@@ -703,6 +833,7 @@
    /*======================= ADVANTAGES =========================*/
    .s-advantages {
       padding: 120px 0 60px;
+
       &__list {
          img {
             max-width: 120px;
@@ -798,17 +929,19 @@
    }
 
    /*======================= HEADER =========================*/
-   .header  {
-      .main-caption  {
+   .header {
+      .main-caption {
          .img-wrap {
             width: 390px;
          }
+
          &__extra {
             font-size: 47px;
             top: 73%;
             right: 5%;
          }
       }
+
       &-composition {
          .fly {
             top: 142%;
@@ -817,6 +950,7 @@
             align-items: center;
          }
       }
+
       &-callback {
          width: 375px;
       }
@@ -994,36 +1128,43 @@
    }
 
    /*======================= HEADER =========================*/
-   .header  {
+   .header {
       .navbar .navbar-brand img {
          width: 175px;
          height: 43px;
       }
+
       .main-caption {
 
          &:before {
             display: none;
          }
+
          .img-wrap {
             width: 330px;
             margin: auto;
          }
+
          &__extra {
             font-size: 41px;
             top: 75%;
             right: 5%;
          }
       }
+
       &-callback {
          width: 315px;
+
          &__form-wrap form {
             width: 93%;
          }
       }
+
       .header-composition .fly {
          top: 160%;
+
          img {
-            transform: translate(-12px,-75px);
+            transform: translate(-12px, -75px);
          }
       }
 

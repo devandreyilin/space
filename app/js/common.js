@@ -36,9 +36,9 @@ $(function () {
    if ($(window).width() < 992) {
       $('.navbar-toggler').on('click', function () {
          if ($('#navbarNavDropdown').hasClass('show')) {
-            $('.object-3').css('top', '11%');
+            $('.header .scene .object-3').css('top', '11%');
          } else {
-            $('.object-3').css('top', '25%');
+            $('.header .scene .object-3').css('top', '25%');
 
          }
 
@@ -52,7 +52,7 @@ $(function () {
             $('.price-slider__value span').text(attrValue + " Р");
             $('.price-slider__value span').attr('data-text', attrValue + " Р");
             $('.s-price .rocket').css({
-               'background-image': "url(../img/elements/price/rocket-slide-"+ attrSlide +".png)"});
+               'background-image': "url('img/elements/price/rocket-slide-"+ attrSlide +".png')"});
       }, 800);
    });
 
