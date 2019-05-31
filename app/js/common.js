@@ -6,6 +6,9 @@ $(function () {
    $('.carousel-how').carousel({
       interval: 3000
    });
+   $('.price-slider').carousel({
+      interval: false
+   });
 
    $(".navbar-toggle").on("click", function () {
       $(this).toggleClass("active");
@@ -31,16 +34,28 @@ $(function () {
    }
 
    if ($(window).width() < 992) {
-      $('.navbar-toggler').on('click', function() {
-            if($('#navbarNavDropdown').hasClass('show')) {
-               $('.object-3').css('top', '11%');
-            } else {
-               $('.object-3').css('top', '25%');
+      $('.navbar-toggler').on('click', function () {
+         if ($('#navbarNavDropdown').hasClass('show')) {
+            $('.object-3').css('top', '11%');
+         } else {
+            $('.object-3').css('top', '25%');
 
-            }
+         }
 
       });
    }
+
+   $('.price-slider').on('click', function () {
+      setTimeout(function () {
+            var attrValue = $('.price-slider .carousel-item.active').attr('data-value');
+            var attrSlide = $('.price-slider .carousel-item.active').attr('data-slide');
+            $('.price-slider__value span').text(attrValue + " Р");
+            $('.price-slider__value span').attr('data-text', attrValue + " Р");
+            $('.s-price .rocket').css({
+               'background-image': "url(../img/elements/price/rocket-slide-"+ attrSlide +".png)"});
+      }, 800);
+   });
+
 
    if ($(window).width() > 767) {
       $(window).on('scroll', function () {
@@ -52,9 +67,6 @@ $(function () {
          });
       });
    }
-
-
-
 
 
    $(window).on('load', function () {

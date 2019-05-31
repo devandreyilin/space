@@ -7,74 +7,76 @@
 // ≥1600px
 @media only screen and (max-width: 1600px) {
 
-   .scene {
 
-      .object-1 {
-         top: 13%;
-         left: 1%;
-      }
-
-      .object-2 {
-         display: none;
-      }
-
-      .object-3 {
-         top: 11%;
-         left: 23.5%;
-      }
-
-      .object-4 {
-         top: 17%;
-         left: 49%;
-      }
-
-      .object-5 {
-         display: none;
-      }
-
-      .object-6 {
-
-      }
-
-      .object-7 {
-         width: 87px;
-         height: 48px;
-         top: 32%;
-         left: 46%;
-      }
-
-      .object-8 {
-         width: 69px;
-         height: 72px;
-         top: 54%;
-         left: 47%;
-      }
-
-      .object-9 {
-         width: 123px;
-         height: 95px;
-         left: 38%;
-      }
-
-      .object-10 {
-         width: 300px;
-         height: 170px;
-         top: 77%;
-         left: 1%;
-      }
-
-      .object-11 {
-         width: 320px;
-         height: 590px;
-         bottom: 5%;
-         left: 60%;
-      }
-   }
 
    /*======================= HEADER =========================*/
    .header {
       &:before {
          background-size: 542px 469px;
+      }
+
+      .scene {
+
+         .object-1 {
+            top: 13%;
+            left: 1%;
+         }
+
+         .object-2 {
+            display: none;
+         }
+
+         .object-3 {
+            top: 11%;
+            left: 23.5%;
+         }
+
+         .object-4 {
+            top: 17%;
+            left: 49%;
+         }
+
+         .object-5 {
+            display: none;
+         }
+
+         .object-6 {
+
+         }
+
+         .object-7 {
+            width: 87px;
+            height: 48px;
+            top: 32%;
+            left: 46%;
+         }
+
+         .object-8 {
+            width: 69px;
+            height: 72px;
+            top: 54%;
+            left: 47%;
+         }
+
+         .object-9 {
+            width: 123px;
+            height: 95px;
+            left: 38%;
+         }
+
+         .object-10 {
+            width: 300px;
+            height: 170px;
+            top: 77%;
+            left: 1%;
+         }
+
+         .object-11 {
+            width: 320px;
+            height: 590px;
+            bottom: 5%;
+            left: 60%;
+         }
       }
 
       &-callback {
@@ -131,17 +133,20 @@
 // ≥1300px
 @media only screen and (max-width: 1300px) {
 
-   .scene {
-      .object-10 {
-         left: 0;
-         top: 76%;
-         width: 270px;
-         height: 150px;
-      }
-   }
+
 
    /*======================= HEADER =========================*/
    .header {
+
+      .scene {
+         .object-10 {
+            left: 0;
+            top: 76%;
+            width: 270px;
+            height: 150px;
+         }
+      }
+
       &-callback {
          margin-right: 0;
          margin-left: 80px;
@@ -191,21 +196,21 @@
 // ≥1200px
 @include media-breakpoint-down(lg) {
 
-   .scene {
-      .object-3 {
-         top: 11%;
-         left: 44.5%;
-      }
-
-      .object-4 {
-         top: 16%;
-         left: 66%;
-      }
-   }
-
    /*======================= HEADER =========================*/
    .header {
       height: 100%;
+
+      .scene {
+         .object-3 {
+            top: 11%;
+            left: 44.5%;
+         }
+
+         .object-4 {
+            top: 16%;
+            left: 66%;
+         }
+      }
 
       .navbar {
          .navbar-brand {
@@ -347,24 +352,24 @@
 // ≥992px
 @include media-breakpoint-down(md) {
 
-   .scene {
-      .object-4, .object-7 {
-         display: none;
-      }
-
-      .object-2 {
-         display: block;
-      }
-
-      .object-3 {
-         transition: 1s;
-      }
-   }
-
 
    /*======================= HEADER =========================*/
    .header {
       height: 100%;
+
+      .scene {
+         .object-4, .object-7 {
+            display: none;
+         }
+
+         .object-2 {
+            display: block;
+         }
+
+         .object-3 {
+            transition: 1s;
+         }
+      }
 
       .navbar {
          .navbar-brand {
@@ -502,18 +507,21 @@
 // ≥768px
 @include media-breakpoint-down(sm) {
 
-   .scene {
-      .object-6 {
-         display: none;
-      }
 
-      .object-1 {
-         top: 19%;
-         left: -5%;
-      }
-   }
    /*======================= HEADER =========================*/
    .header {
+
+      .scene {
+         .object-6 {
+            display: none;
+         }
+
+         .object-1 {
+            top: 19%;
+            left: -5%;
+         }
+      }
+
       &-composition {
          .fly {
             left: 9%;
@@ -659,16 +667,19 @@
          background-attachment: scroll !important;
       }
    }
-   .scene {
-      .object-3 {
-         left: 40.5%;
-      }
-      .object-1 {
-         display: none;
-      }
-   }
+
    /*======================= HEADER =========================*/
    .header {
+
+      .scene {
+         .object-3 {
+            left: 40.5%;
+         }
+         .object-1 {
+            display: none;
+         }
+      }
+
       .main-caption {
          margin-bottom: 260px;
          &:before {
