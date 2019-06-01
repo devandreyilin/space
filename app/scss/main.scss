@@ -19,6 +19,7 @@ body {
    font-family: $default-font;
    overflow-x: hidden;
    color: $text;
+   width: 100vw;
 
    input, textarea {
       border: #666 1px solid;
@@ -206,6 +207,14 @@ header, section {
    }
 }
 
+.form-control:focus {
+   border-color: #80bdff;
+   box-shadow: none;
+}
+.btn-primary.focus, .btn-primary:focus {
+   box-shadow: none;
+}
+
 .navbar-toggler > .close {
    display: inline;
 }
@@ -268,6 +277,14 @@ header, section {
       background-size: 775px 670px;
       background-repeat: no-repeat;
       background-image: url('../img/elements/header/green-planet.png');
+   }
+
+   .modal-body {
+      p {
+         margin-bottom: 0;
+         color: green;
+         font-size: 18px;
+      }
    }
 
    .scene {
@@ -379,7 +396,10 @@ header, section {
          padding-top: 1em;
       }
    }
-
+   .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+      opacity: 1;
+      color: $white;
+   }
    .navbar {
       .navbar-toggler {
          background: #e8e8e8;
@@ -408,8 +428,7 @@ header, section {
          &:last-child {
             margin-right: 0;
          }
-
-         &:hover {
+         &:hover,&:focus, &:active {
             a {
                opacity: 1;
                color: $white;
@@ -862,7 +881,7 @@ header, section {
       justify-content: center;
       align-items: center;
       width: 460px;
-      height: 630px;
+      height: 570px;
    }
 
    .island-block {
@@ -913,6 +932,20 @@ header, section {
       background-image: url('../img/elements/price/rocket-slide-1.png');
       background-position: bottom center;
       background-size: contain;
+   }
+
+   .price-form .success {
+      display: none;
+      text-align: center;
+      color: green;
+      font-size: 18px;
+      margin-bottom: 17px;
+      p {
+         margin-bottom: 0;
+      }
+      .modal-footer {
+         margin-top: 50px;
+      }
    }
 
    .slider-wrap {
@@ -1092,7 +1125,7 @@ header, section {
          .title {
             position: relative;
             display: flex;
-            z-index: 1;
+            z-index: 4;
          }
 
          .h3-title {

@@ -570,8 +570,53 @@
       }
    }
 
+   /*======================= PRICE =========================*/
+   .s-price {
+      padding: 350px 0;
+
+      .section-title {
+         .h2-title {
+            font-size: 53px;
+         }
+
+         img {
+            width: 542px;
+         }
+      }
+
+      .section-content {
+         flex-direction: column;
+         margin-top: 85px;
+      }
+
+      .island-wrap {
+         width: 540px;
+      }
+
+      .island-block {
+         margin: auto auto 0;
+         transform: scale(1);
+      }
+
+      .slider-wrap {
+         width: 720px;
+         margin-top: 60px;
+      }
+
+      .price-slider {
+         margin-left: 91px;
+
+         &__order-btn {
+            bottom: -11%;
+         }
+      }
+
+   }
+
    /*======================= HOW =========================*/
    .s-how {
+      padding: 140px 0 180px;
+
       .col-lg-6 {
          padding-right: 15px;
 
@@ -714,8 +759,64 @@
       }
    }
 
+   /*======================= PRICE =========================*/
+   .s-price {
+      padding: 280px 0 350px;
+
+      .section-content {
+         margin-top: 45px;
+      }
+
+      .section-title {
+         .h2-title {
+            font-size: 47px;
+         }
+
+         img {
+            width: 490px;
+         }
+      }
+
+      .carousel-control-next, .carousel-control-prev {
+         bottom: 4%;
+         width: 17%;
+         height: 17%;
+      }
+
+      .carousel-control-next {
+         right: 27%;
+      }
+
+      .carousel-control-prev {
+         left: 27%;
+      }
+
+      .slider-wrap {
+         margin-top: 100px;
+         width: 560px;
+         height: 640px;
+      }
+
+      .price-slider {
+         margin: 0 auto;
+         padding: 30px 85px 0;
+
+         &__captions {
+            left: 66.5%;
+            top: -41.4%;
+         }
+
+         &__order-btn {
+            bottom: -11%;
+            left: 28%;
+         }
+      }
+   }
+
    /*======================= HOW =========================*/
    .s-how {
+      padding: 120px 0 130px;
+
       .carousel-how, .embed-responsive {
          box-shadow: 0 0 15px 8px rgba(37, 234, 226, .8);
       }
@@ -797,15 +898,19 @@
 
    /*======================= HEADER =========================*/
    .header {
+      &:before {
+         display: none;
+      }
 
       .scene {
          .object-3 {
             left: 40.5%;
          }
 
-         .object-1 {
+         .object-1, .object-10 {
             display: none;
          }
+
       }
 
       .main-caption {
@@ -847,6 +952,71 @@
             }
          }
       }
+   }
+
+   /*======================= PRICE =========================*/
+   .s-price {
+      .section-title {
+         .h2-title {
+            font-size: 36px;
+         }
+
+         img {
+            width: 370px;
+            height: 80px;
+         }
+      }
+
+      .scene {
+         .object-1 {
+            top: 19%;
+            left: 1%;
+         }
+
+         .object-2 {
+            top: 7%;
+            left: 30%;
+         }
+
+         .object-4 {
+            top: 89%;
+            left: -5%;
+         }
+
+         .object-5 {
+            top: 95%;
+            left: 54%;
+         }
+
+         .object-6 {
+            top: 87%;
+            left: 74%;
+         }
+
+      }
+
+      .slider-wrap {
+         margin-top: 250px;
+         height: 620px;
+      }
+
+      .price-slider {
+         .carousel-inner {
+            margin-top: 62px;
+         }
+
+         &__value {
+            top: -4%;
+            right: 49%;
+         }
+
+         &__captions {
+            left: 58.5%;
+            top: -36.4%;
+         }
+      }
+
+
    }
 
    /*======================= HOW =========================*/
@@ -977,6 +1147,17 @@
                width: 322px;
             }
          }
+      }
+   }
+
+   /*======================= PRICE =========================*/
+   .s-price {
+      .island-block {
+         transform: scale(.9);
+      }
+
+      .slider-wrap {
+         transform: scale(.9);
       }
    }
 
@@ -1170,6 +1351,7 @@
 
    }
 
+   /*======================= ADVANTAGES =========================*/
    .s-advantages {
       padding: 50px 0 20px;
 
@@ -1188,8 +1370,50 @@
       }
    }
 
+   /*======================= PRICE =========================*/
+   .s-price {
+      .section-title {
+         .h2-title {
+            font-size: 30px;
+         }
+         img {
+            width: 290px;
+         }
+      }
+
+      .section-content {
+         margin-top: 0;
+      }
+      .slider-wrap {
+         width: 510px;
+         height: 650px;
+         margin-top: 170px;
+      }
+
+      .price-slider {
+         &__value {
+            top: -2%;
+            right: 45%;
+            width: 195px;
+            span {
+               font-size: 30px;
+            }
+         }
+         &__captions{
+            left: 52.5%;
+            top: -33%;
+         }
+
+      }
+      .island-block {
+         transform: scale(0.75);
+      }
+   }
+
    /*======================= HOW =========================*/
    .s-how {
+      padding: 90px 0;
+
       &__sliders {
          margin: 70px 0 30px;
       }

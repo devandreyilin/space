@@ -31,6 +31,29 @@
 
    <!-- HEADER -->
    <header class="header" style="background-image: url('img/bg/header.png');">
+
+      <!-- Modal -->
+      <div class="modal fade" id="header-modal" tabindex="-1" role="dialog" aria-labelledby="header-modal"
+           aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="header-modal">Спасибо за заявку!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                 <p>Ваше письмо было успешно отправлено!</p>
+                  <p>В скором времени мы свяжемся с вами.</p>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
+               </div>
+            </div>
+         </div>
+      </div>
+
       <div class="flex-wrapper">
          <div class="scene">
             <div data-offset="20" class="parallax object-1"></div>
@@ -97,20 +120,24 @@
 
 
             <div class="d-flex flex-column">
+
                <div class="header-callback">
                   <img class="astronaut" src="img/elements/header/astronaut-logo.png" alt="">
                   <div class="header-callback__form-wrap">
                      <b class="header-callback__text">Оставьте заявку
                         <span>А мы вам перезвоним</span></b>
-                     <form>
-                        <input type="text" name="name" placeholder="Имя">
-                        <input type="text" name="phone" placeholder="Номер телефона">
+                     <form id="header-form">
+                        <input type="hidden" name="place" value="Шапка сайта">
+                        <input type="hidden" name="product-name" value="Обратный звонок">
+                        <input id="name" type="text" name="name" placeholder="Имя">
+                        <input id="phone" type="text" name="phone" placeholder="Номер телефона">
                      </form>
                   </div>
                   <div class="d-flex flex-wrap m-md-auto align-items-center">
                      <img class="astronaut" src="img/elements/header/astronaut-logo.png" alt="">
                      <img class="spaceship" src="img/elements/header/spaceship-logo.png" alt="">
-                     <button class="btn btn-order"><span>Забронировать <span>космический полет</span></span>
+                     <button form="header-form" type="submit" class="btn btn-order" data-toggle="modal"
+                             data-target="#header-modal"><span>Забронировать <span>космический полет</span></span>
                         <span class="icon"><img class="svg-inject" src="img/icon/arrow-right.svg" alt=""></span>
                      </button>
                   </div>
@@ -170,6 +197,45 @@
 
          <section class="s-price">
 
+            <!-- Modal -->
+            <div class="modal fade" id="modal-slider" tabindex="-1" role="dialog" aria-labelledby="modal-slider"
+                 aria-hidden="true">
+               <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <h5 class="modal-title" id="modal-slider">Заявка на <span></span></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                     <div class="modal-body">
+
+                        <form id="price-form" class="price-form">
+                           <input id="hidden-input" type="hidden" name="product-name" value="">
+                           <input type="hidden" name="place" value="Секция с ценами">
+                           <div class="form-group">
+                              <label for="formGroupExampleInput">Ваше имя</label>
+                              <input type="text" class="form-control name" id="formGroupExampleInput" placeholder="Имя"
+                                     name="name">
+                           </div>
+                           <div class="form-group">
+                              <label for="formGroupExampleInput2">Ваш телефон</label>
+                              <input type="text" class="form-control phone" id="formGroupExampleInput2"
+                                     placeholder="Телефон" name="phone">
+                           </div>
+                           <div class="success">
+                              <p>Ваша заявка успешно отправлена!</p>
+                              <p>В скором времени мы с вами свяжемся.</p>
+                           </div>
+                           <div class="modal-footer">
+                              <button type="submit" class="btn btn-primary m-auto">Отправить</button>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
             <div class="scene">
                <div data-offset="40" class="parallax object-1"></div>
                <div data-offset="60" class="parallax object-2"></div>
@@ -202,7 +268,8 @@
                   <div class="slider-wrap">
                      <div id="price-slider" class="carousel slide price-slider" data-ride="carousel">
 
-                        <button class="price-slider__order-btn" >
+                        <!-- Button trigger modal -->
+                        <button class="price-slider__order-btn" data-toggle="modal" data-target="#modal-slider">
                            <span data-text="Заказать">Заказать</span>
                            <img src="img/bg/price-order.png" alt="">
                         </button>
