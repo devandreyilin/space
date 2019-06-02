@@ -457,6 +457,22 @@ header, section {
       width: 100vw;
       padding: .3em 1em;
       z-index: 5;
+      &.fixed-active {
+         position: fixed;
+         background: #3c393e;
+            .top,.navbar {
+               padding: 0 !important;
+            .navbar {
+               .navbar-brand {
+                  margin: 0;
+               }
+               .navbar-toggler {
+                  margin: 0;
+               }
+            }
+         }
+
+      }
 
       .top {
          display: flex;

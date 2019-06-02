@@ -329,19 +329,6 @@
             margin-bottom: 30px;
          }
 
-         .nav-item {
-            margin-right: 30px;
-
-            &:hover {
-               a {
-                  opacity: 1;
-
-                  &:after {
-                     transform: translateY(5px) scale(0);
-                  }
-               }
-            }
-         }
       }
 
       &-callback {
