@@ -145,7 +145,6 @@
 
 
       .slider-wrap {
-         height: 585px;
          width: 740px;
       }
 
@@ -161,23 +160,27 @@
             }
          }
 
+         .carousel-inner {
+            margin: 80px 0 120px;
+         }
+
 
          &__captions {
             top: 3%;
-            left: -12.5%;
+            left: -18.5%;
          }
 
          .carousel-item {
             .h3-title {
-               font-size: 32px;
+               font-size: 38px;
             }
 
             &__extra {
-               font-size: 14px;
+               font-size: 19px;
             }
 
             .color p {
-               font-size: 18px;
+               font-size: 21px;
             }
          }
 
@@ -185,7 +188,7 @@
             width: 215px;
 
             span {
-               font-size: 35px;
+               font-size: 45px;
             }
          }
       }
@@ -379,7 +382,6 @@
 
 
       .slider-wrap {
-         height: 575px;
          width: 600px;
       }
 
@@ -387,11 +389,6 @@
          padding: 0 100px;
          margin-left: 0px;
 
-         .carousel-item {
-            .color p {
-               font-size: 17px;
-            }
-         }
 
          &__captions {
             transform: scale(0.9);
@@ -408,11 +405,11 @@
    .s-how {
       .section-title {
          .h2-title {
-            font-size: 41px;
+            font-size: 53px;
          }
 
          img {
-            width: 100%;
+            width: 840px;
          }
       }
    }
@@ -608,6 +605,7 @@
 
          &__order-btn {
             bottom: -11%;
+            left: 25%;
          }
       }
 
@@ -628,11 +626,11 @@
 
       .section-title {
          .h2-title {
-            font-size: 31px;
+            font-size: 53px;
          }
 
          img {
-            height: 200px;
+            height: 180px;
          }
       }
 
@@ -794,12 +792,15 @@
       .slider-wrap {
          margin-top: 100px;
          width: 560px;
-         height: 640px;
       }
 
       .price-slider {
          margin: 0 auto;
          padding: 30px 85px 0;
+
+         .carousel-inner {
+            margin: 80px 0 160px;
+         }
 
          &__captions {
             left: 66.5%;
@@ -827,12 +828,12 @@
 
       .section-title {
          .h2-title {
-            font-size: 31px;
+            font-size: 47px;
             text-align: center;
          }
 
          img {
-            height: 280px;
+            height: 170px;
          }
       }
 
@@ -958,7 +959,7 @@
    .s-price {
       .section-title {
          .h2-title {
-            font-size: 36px;
+            font-size: 46px;
          }
 
          img {
@@ -997,7 +998,6 @@
 
       .slider-wrap {
          margin-top: 250px;
-         height: 620px;
       }
 
       .price-slider {
@@ -1014,6 +1014,12 @@
             left: 58.5%;
             top: -36.4%;
          }
+         &__order-btn {
+            bottom: -12%;
+            span {
+               font-size: 43px;
+            }
+         }
       }
 
 
@@ -1027,11 +1033,11 @@
 
       .section-title {
          .h2-title {
-            font-size: 30px;
+            font-size: 46px;
          }
 
          img {
-            height: 260px;
+            height: 160px;
          }
       }
 
@@ -1058,7 +1064,7 @@
          }
 
          .h2-title {
-            font-size: 40px;
+            font-size: 46px;
          }
       }
    }
@@ -1169,11 +1175,11 @@
 
       .section-title {
          .h2-title {
-            font-size: 25px;
+            font-size: 45px;
          }
 
          img {
-            height: 240px;
+            height: 170px;
          }
       }
    }
@@ -1187,11 +1193,9 @@
       .section-title {
          img {
             width: 350px;
+            height: 90px;
          }
 
-         .h2-title {
-            font-size: 36px;
-         }
       }
 
       div[class^=".col-"] {
@@ -1258,7 +1262,7 @@
          }
 
          .h2-title {
-            font-size: 30px;
+            font-size: 42px;
          }
       }
    }
@@ -1374,7 +1378,7 @@
    .s-price {
       .section-title {
          .h2-title {
-            font-size: 30px;
+            font-size: 42px;
          }
          img {
             width: 290px;
@@ -1386,7 +1390,6 @@
       }
       .slider-wrap {
          width: 510px;
-         height: 650px;
          margin-top: 170px;
       }
 
@@ -1420,11 +1423,11 @@
 
       .section-title {
          .h2-title {
-            font-size: 21px;
+            font-size: 35px;
          }
 
          img {
-            height: 220px;
+            height: 140px;
          }
       }
    }

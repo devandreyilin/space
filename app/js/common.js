@@ -3,10 +3,17 @@ $(function () {
    // inject by class name
    SVGInject(document.getElementsByClassName('svg-inject'));
 
-   $('.carousel-how').carousel({
+   $('#slider-route').carousel({
+      pause: true,
+      interval: false
+   });
+
+   $('#carousel-how').carousel({
       interval: 3000
    });
-   $('.price-slider').carousel({
+
+   $('#price-slider').carousel({
+      pause: true,
       interval: false
    });
 
@@ -72,6 +79,12 @@ $(function () {
 
    $(window).on('load', function () {
 
+      // $('.slider-route .carousel-item').equalHeights();
+      $('.price-slider .carousel-item').equalHeights();
+
+      var routeTextHeight = $('.slider-route .carousel-item__content-composition').height();
+      $('.slider-route .carousel-item__content-img-wrap').css('height', routeTextHeight + 'px');
+
    });
 
 
@@ -85,23 +98,23 @@ $(function () {
       hiddenInput.val(textTitle);
    });
 
-   $('.s-price .close').on('click',function() {
+   $('.s-price .close').on('click', function () {
       $('.price-form .success').fadeOut(300);
    });
 
-   $('.btn-order').on('click', function() {
+   $('.btn-order').on('click', function () {
       var inputName = $('#header-form input#name');
       var inputPhone = $('#header-form input#phone');
-      if( inputName.val() == '' || inputPhone.val() == '') {
-         if(inputName.val() == '') {
+      if (inputName.val() == '' || inputPhone.val() == '') {
+         if (inputName.val() == '') {
             inputName.attr('placeholder', 'Заполните поле!');
-            inputName.on('click', function() {
+            inputName.on('click', function () {
                inputName.attr('placeholder', 'Имя');
             });
          }
-         if(inputPhone.val() == '') {
+         if (inputPhone.val() == '') {
             inputPhone.attr('placeholder', 'Заполните поле!');
-            inputPhone.on('click', function() {
+            inputPhone.on('click', function () {
                inputPhone.attr('placeholder', 'Телефон');
             });
          }
@@ -109,19 +122,19 @@ $(function () {
       }
    });
 
-   $('.s-price #modal-slider .btn').on('click', function() {
+   $('.s-price #modal-slider .btn').on('click', function () {
       var inputName = $('#price-form input.name');
       var inputPhone = $('#price-form input.phone');
-      if( inputName.val() == '' || inputPhone.val() == '') {
-         if(inputName.val() == '') {
+      if (inputName.val() == '' || inputPhone.val() == '') {
+         if (inputName.val() == '') {
             inputName.attr('placeholder', 'Заполните поле!');
-            inputName.on('click', function() {
+            inputName.on('click', function () {
                inputName.attr('placeholder', 'Имя');
             });
          }
-         if(inputPhone.val() == '') {
+         if (inputPhone.val() == '') {
             inputPhone.attr('placeholder', 'Заполните поле!');
-            inputPhone.on('click', function() {
+            inputPhone.on('click', function () {
                inputPhone.attr('placeholder', 'Телефон');
             });
          }
