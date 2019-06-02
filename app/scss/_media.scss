@@ -60,7 +60,7 @@
          .object-9 {
             width: 123px;
             height: 95px;
-            left: 38%;
+            left: 47%;
          }
 
          .object-10 {
@@ -118,20 +118,46 @@
 
    /*======================= HEADER =========================*/
    .header {
+      &-composition {
+         margin-left: -46%;
+      }
+
       .main-caption {
          margin-left: 0%;
       }
 
       &-callback {
-         transform: translateX(-30px);
+      }
+   }
+
+   /*======================= ROUTE =========================*/
+   .s-route {
+      padding: 300px 0 100px;
+
+      .slider-wrap {
+         padding: 50px 240px 220px;
+
+      }
+
+      &__title {
+         margin-bottom: 30px;
       }
    }
 
    /*======================= PRICE =========================*/
    .s-price {
 
-      .scene .object-2 {
-         top: 18%;
+      .scene {
+         .object-2 {
+            top: 24%;
+         }
+         .object-5 {
+            bottom: -20%;
+         }
+         .object-6 {
+            bottom: -9%;
+            right:10%;
+         }
       }
 
       .section-content {
@@ -194,6 +220,7 @@
       }
    }
 
+
 }
 
 // ≥1300px
@@ -255,6 +282,13 @@
 
    }
 
+   /*======================= ROUTE =========================*/
+   .s-route {
+      &__title {
+         font-size: 27px;
+      }
+   }
+
 }
 
 
@@ -266,6 +300,10 @@
       height: 100%;
 
       .scene {
+         .object-7, .object-8, .object-9 {
+            display: none;
+         }
+
          .object-3 {
             top: 11%;
             left: 44.5%;
@@ -312,6 +350,7 @@
 
       &-composition {
          flex-direction: column;
+         margin-left: -5%;
       }
 
       .main-caption {
@@ -339,6 +378,28 @@
          p {
             font-size: 39px;
          }
+      }
+   }
+
+   /*======================= ROUTE =========================*/
+   .s-route {
+      &__title {
+         font-size: 27px;
+      }
+
+      .scene {
+         .object-1, .object-2, .object-5, .object-6 {
+            display: none;
+         }
+
+         .object-8 {
+            width: 470px;
+            height: 70px;
+         }
+      }
+
+      .slider-wrap {
+         padding: 50px 110px 220px;
       }
    }
 
@@ -473,6 +534,7 @@
 
 }
 
+
 // ≥992px
 @include media-breakpoint-down(md) {
 
@@ -550,6 +612,45 @@
    }
 
 
+   /*======================= ROUTE =========================*/
+   .s-route {
+      padding: 300px 0 50px;
+
+      .scene {
+         .object-3, .object-4, .object-8 {
+            display: none;
+         }
+      }
+
+      .carousel-control-prev, .carousel-control-next {
+         width: 13%;
+      }
+
+      .carousel-control-prev {
+         left: -13.5%;
+
+      }
+
+      .carousel-control-next {
+         right: -13.5%;
+      }
+
+      .slider-wrap {
+         padding: 50px 90px 190px;
+      }
+
+      .slider-route {
+         .carousel-item__content-img-wrap {
+            height: 268px;
+
+            &:before, &:after {
+               width: 165px;
+               height: 8px;
+            }
+         }
+      }
+   }
+
    /*======================= ADVANTAGES =========================*/
    .s-advantages {
       padding: 100px 0 60px;
@@ -570,6 +671,10 @@
    /*======================= PRICE =========================*/
    .s-price {
       padding: 350px 0;
+
+      .scene .object-2 {
+         top: 10%;
+      }
 
       .section-title {
          .h2-title {
@@ -682,7 +787,7 @@
    .header {
 
       .scene {
-         .object-6 {
+         .object-6, .object-10 {
             display: none;
          }
 
@@ -757,9 +862,77 @@
       }
    }
 
+   /*======================= ROUTE =========================*/
+   .s-route {
+      padding: 300px 0 20px;
+
+      &__title {
+         font-size: 22px;
+
+         &:before {
+            width: 566px;
+         }
+
+         &:after {
+            width: 521px;
+         }
+      }
+
+      .carousel-control-next, .carousel-control-prev {
+         width: 15%;
+         background-size: 51px 42px;
+      }
+
+      .carousel-control-next {
+         right: -14%;
+      }
+
+      .carousel-control-prev {
+         left: -14%;
+      }
+
+      .slider-route {
+         padding: 30px 30px;
+
+         &:before {
+            height: 96%;
+         }
+
+         .carousel-item__content {
+            flex-direction: column;
+            text-align: center;
+
+            &-img-wrap {
+               margin: 20px 0;
+               width: 100%;
+            }
+
+            &-composition {
+               width: 100%;
+
+               .h3-title {
+                  font-size: 26px;
+               }
+
+               &-desc {
+                  margin: 15px 0 30px;
+               }
+            }
+         }
+      }
+
+      .slider-wrap {
+         padding: 50px 70px 190px;
+      }
+   }
+
    /*======================= PRICE =========================*/
    .s-price {
       padding: 280px 0 350px;
+
+      .scene .object-2 {
+         top: 6%;
+      }
 
       .section-content {
          margin-top: 45px;
@@ -800,6 +973,17 @@
 
          .carousel-inner {
             margin: 80px 0 160px;
+         }
+
+         .carousel-item {
+            .h3-title {
+               background: none;
+               -webkit-background-clip: initial;
+               -webkit-text-fill-color: initial;
+               &:after {
+                  display: none;
+               }
+            }
          }
 
          &__captions {
@@ -955,6 +1139,62 @@
       }
    }
 
+   /*======================= ROUTE =========================*/
+   .s-route {
+      padding: 300px 0 0;
+
+      &__title {
+         width: 100vw;
+         margin-left: calc(-50vw + 50%);
+
+         &:before {
+            width: 416px;
+            height: 30px;
+         }
+
+         &:after {
+            width: 401px;
+            height: 55px;
+            bottom: 8%;
+         }
+      }
+
+      .carousel-control-next, .carousel-control-prev {
+         width: 35%;
+         top: 180px;
+         opacity: 1;
+
+         &:hover, &:focus {
+            opacity: 1;
+         }
+      }
+
+      .carousel-control-prev {
+         left: -3.5%;
+      }
+
+      .carousel-control-next {
+         right: -3.5%;
+      }
+
+      .slider-wrap {
+         padding: 50px 5px 190px;
+         box-shadow: 0 0 50px 20px rgba(37, 234, 226, .6);
+      }
+
+      .slider-route {
+         .carousel-item__content-composition-extra {
+            text-align: left;
+
+            span {
+               margin-left: 6%;
+            }
+         }
+      }
+
+
+   }
+
    /*======================= PRICE =========================*/
    .s-price {
       .section-title {
@@ -1014,8 +1254,10 @@
             left: 58.5%;
             top: -36.4%;
          }
+
          &__order-btn {
             bottom: -12%;
+
             span {
                font-size: 43px;
             }
@@ -1068,7 +1310,6 @@
          }
       }
    }
-
 
    /*======================= CONTACTS =========================*/
    .s-contacts {
@@ -1156,8 +1397,62 @@
       }
    }
 
+   /*======================= ROUTE =========================*/
+   .s-route {
+
+      &__title {
+         padding: 50px 8px 80px;
+
+         &:before {
+            width: 296px;
+         }
+
+         &:after {
+            width: 270px;
+         }
+      }
+
+      .scene {
+         .object-7, .object-9 {
+            display: none;
+         }
+      }
+
+      .carousel-control-next {
+         right: -5%;
+      }
+
+      .carousel-control-prev {
+         left: -5%;
+      }
+
+      .slider-wrap {
+         padding: 50px 5px 60px;
+      }
+
+      .slider-route {
+         &:before {
+            height: 98%;
+         }
+
+         .carousel-item__content-composition {
+            .h3-title {
+               font-size: 24px;
+            }
+         }
+      }
+
+   }
+
    /*======================= PRICE =========================*/
    .s-price {
+
+      .scene .object-2 {
+         height: 117px;
+         width: 241px;
+         left: 20%;
+      }
+
       .island-block {
          transform: scale(.9);
       }
@@ -1380,6 +1675,7 @@
          .h2-title {
             font-size: 42px;
          }
+
          img {
             width: 290px;
          }
@@ -1388,6 +1684,7 @@
       .section-content {
          margin-top: 0;
       }
+
       .slider-wrap {
          width: 510px;
          margin-top: 170px;
@@ -1398,16 +1695,19 @@
             top: -2%;
             right: 45%;
             width: 195px;
+
             span {
                font-size: 30px;
             }
          }
-         &__captions{
+
+         &__captions {
             left: 52.5%;
             top: -33%;
          }
 
       }
+
       .island-block {
          transform: scale(0.75);
       }

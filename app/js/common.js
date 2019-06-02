@@ -3,19 +3,9 @@ $(function () {
    // inject by class name
    SVGInject(document.getElementsByClassName('svg-inject'));
 
-   $('#slider-route').carousel({
-      pause: true,
-      interval: false
-   });
 
-   $('#carousel-how').carousel({
-      interval: 3000
-   });
 
-   $('#price-slider').carousel({
-      pause: true,
-      interval: false
-   });
+
 
    $(".navbar-toggle").on("click", function () {
       $(this).toggleClass("active");
@@ -45,7 +35,7 @@ $(function () {
          if ($('#navbarNavDropdown').hasClass('show')) {
             $('.header .scene .object-3').css('top', '11%');
          } else {
-            $('.header .scene .object-3').css('top', '25%');
+            $('.header .scene .object-3').css('top', '31%');
 
          }
 
@@ -76,16 +66,6 @@ $(function () {
       });
    }
 
-
-   $(window).on('load', function () {
-
-      // $('.slider-route .carousel-item').equalHeights();
-      $('.price-slider .carousel-item').equalHeights();
-
-      var routeTextHeight = $('.slider-route .carousel-item__content-composition').height();
-      $('.slider-route .carousel-item__content-img-wrap').css('height', routeTextHeight + 'px');
-
-   });
 
 
    // Callback
@@ -176,4 +156,50 @@ $(function () {
       return false;
    });
 
+});
+
+
+$(window).on('load',function() {
+
+   $('.price-slider .carousel-item').equalHeights();
+
+
+   if($(window).width() > 1199) {
+
+      $(window).on('scroll', function() {
+
+         var headerHeight = $('.header').height();
+         var scrollTop = $(window).scrollTop();
+         var ticket = $('.header .ticket');
+
+         if (scrollTop > headerHeight) {
+            if(ticket.is(":hidden")) {
+               ticket.stop().css('display', 'flex').hide().fadeIn(300);
+            }
+         }
+         if (scrollTop < headerHeight) {
+            if(ticket.is(":visible")) {
+               ticket.fadeOut(300);
+            }
+         }
+
+      });
+
+   }
+   
+
+   $('#slider-route').carousel({
+      pause: true,
+      interval: false
+   });
+
+   $('#carousel-how').carousel({
+      interval: 3000
+   });
+
+   $('#price-slider').carousel({
+      pause: true,
+      interval: false,
+      touch: false
+   });
 });

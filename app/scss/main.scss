@@ -589,6 +589,7 @@ header, section {
    &-composition {
       height: calc(100% - 115px);
       z-index: 4;
+      margin-left: -30%;
 
       .fly {
          position: absolute;
@@ -603,10 +604,18 @@ header, section {
       }
    }
 
+   .ticket {
+      position: fixed;
+      display: none;
+      flex-direction: column;
+      z-index: 5;
+      right: 1%;
+      top: 2%;
+   }
+
    &-callback {
       margin-top: auto;
       margin-bottom: 30px;
-      margin-right: -200px;
       z-index: 4;
       position: relative;
       display: flex;
@@ -778,7 +787,7 @@ header, section {
    &:after {
       background-image: url('../img/bg/cloud-bottom.png');
       bottom: 0;
-      transform: translateY(50%);
+      transform: translateY(80%);
       background-position: bottom center;
    }
 
@@ -883,7 +892,7 @@ header, section {
 
 /*======================= ROUTE =========================*/
 .s-route {
-   padding: 200px 0;
+   padding: 310px 0 130px;
 
    &__title {
       position: relative;
@@ -1038,6 +1047,27 @@ header, section {
    }
 
    .slider-route {
+      padding: 50px 40px;
+      border-radius: 23px;
+      background: linear-gradient(to right, rgba(255,148,34,1) 0%, rgba(255,44,107,1) 100%);
+
+      &:before {
+         position: absolute;
+         content: '';
+         display: block;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%,-50%);
+         //background-image: url('../img/elements/route/border.png');
+         border: 3px solid #ffec17;
+         border-radius: 23px;
+         width: 96%;
+         height: 93%;
+         background-size: 100% 100%;
+         background-repeat: no-repeat;
+         background-position: center;
+         z-index: 0;
+      }
 
       .carousel-item {
          &__content {
@@ -1046,9 +1076,32 @@ header, section {
             align-items: flex-start;
 
             &-img-wrap {
+               position: relative;
                width: 35%;
                display: flex;
-               height: 330px;
+               height: 350px;
+               padding: 20px 0;
+               &:before, &:after {
+                  position: absolute;
+                  display: block;
+                  content: '';
+                  width: 215px;
+                  height: 11px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  background-size: 100% 100%;
+                  background-repeat: no-repeat;
+                  background-position: center;
+               }
+               &:before {
+                  top: 0;
+                  background-image: url('../img/elements/route/img-top.png');
+               }
+               &:after {
+                  bottom: 0;
+                  background-image: url('../img/elements/route/img-bottom.png');
+               }
+
 
                img {
                   margin: auto;
@@ -1061,10 +1114,17 @@ header, section {
 
             &-composition {
                width: 60%;
+               font-family: "Ermilov", sans-serif;
+
+               br {
+                  margin-bottom: 9px;
+                  &:last-child {
+                     margin-bottom: 0;
+                  }
+               }
 
                .h3-title {
                   color: #ffe617;
-                  font-family: "Ermilov", sans-serif;
                   font-size: 28px;
                   font-weight: 700;
                   text-transform: uppercase;
@@ -1078,8 +1138,7 @@ header, section {
                   }
                }
                &-desc {
-                  margin-top: 20px;
-                  margin: 0;
+                  margin: 15px 0 0;
                   color: #fff;
                }
             }
@@ -1108,7 +1167,7 @@ header, section {
       .object-2 {
          width: 281px;
          height: 137px;
-         top: 16%;
+         top: 21%;
          left: 49%;
          background-image: url('../img/elements/price/object-2.png');
       }
@@ -1124,7 +1183,7 @@ header, section {
       .object-4 {
          width: 159px;
          height: 85px;
-         top: 87%;
+         bottom: 3%;
          left: 5%;
          background-image: url('../img/elements/price/object-4.png');
       }
@@ -1132,7 +1191,7 @@ header, section {
       .object-5 {
          width: 66px;
          height: 82px;
-         top: 100%;
+         bottom: -10%;
          left: 71%;
          background-image: url('../img/elements/price/object-5.png');
       }
@@ -1140,7 +1199,7 @@ header, section {
       .object-6 {
          width: 145px;
          height: 134px;
-         top: 89%;
+         bottom: 1%;
          left: 89%;
          background-image: url('../img/elements/price/object-6.png');
       }
@@ -1416,6 +1475,7 @@ header, section {
             z-index: 4;
          }
 
+
          .h3-title {
             display: flex;
             justify-content: center;
@@ -1423,6 +1483,7 @@ header, section {
             background: linear-gradient(to top, #ff9600 0%, #fff000 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            color: #ffca3a;
             position: relative;
             font-size: 35px;
             font-weight: 700;
