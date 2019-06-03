@@ -295,6 +295,26 @@
 // ≥1200px
 @include media-breakpoint-down(lg) {
 
+   /*======================= THANKS =========================*/
+   body {
+      &.thanks-page {
+         .h1-title {
+            .h2-title {
+               font-size: 90px;
+               &:last-child {
+                  margin-left: 44px;
+                  font-size: 65px;
+               }
+            }
+         }
+         .extra {
+            span {
+               font-size: 41px;
+            }
+         }
+      }
+   }
+
    /*======================= HEADER =========================*/
    .header {
       height: 100%;
@@ -525,6 +545,35 @@
 // ≥992px
 @include media-breakpoint-down(md) {
 
+
+   /*======================= THANKS =========================*/
+   body {
+      &.thanks-page {
+         .h1-title {
+            .h2-title {
+               font-size: 80px;
+               &:last-child {
+                  margin-left: 34px;
+                  font-size: 57px;
+               }
+            }
+         }
+         .extra {
+            span {
+               font-size: 38px;
+               &:nth-child(2) {
+                  margin-left: 15px;
+               }
+               &:nth-child(3) {
+                  margin-left: 60px;
+               }
+               &:nth-child(4) {
+                  margin-left: 70px;
+               }
+            }
+         }
+      }
+   }
 
    /*======================= HEADER =========================*/
    .header {
@@ -769,6 +818,45 @@
 // ≥768px
 @include media-breakpoint-down(sm) {
 
+   /*======================= THANKS =========================*/
+   body {
+      &.thanks-page {
+         .flex-center {
+            margin-left: auto;
+         }
+         .scene .object-1 {
+            display: none;
+         }
+         .h1-title {
+            .h2-title {
+               font-size: 80px;
+               margin: auto;
+               &:last-child {
+                  margin-left: 0;
+                  font-size: 57px;
+               }
+            }
+         }
+         .composition {
+            text-align: center;
+         }
+         .extra {
+            margin-left: 0;
+            span {
+               font-size: 38px;
+               &:nth-child(2) {
+                  margin-left: 0;
+               }
+               &:nth-child(3) {
+                  margin-left: 0;
+               }
+               &:nth-child(4) {
+                  margin-left: 0;
+               }
+            }
+         }
+      }
+   }
 
    /*======================= HEADER =========================*/
    .header {
@@ -1065,6 +1153,26 @@
 
       &:before, &:after {
          background-attachment: scroll !important;
+      }
+   }
+
+   /*======================= THANKS =========================*/
+   body {
+      &.thanks-page {
+         .h1-title {
+            .h2-title {
+               font-size: 70px;
+               &:last-child {
+                  font-size: 53px;
+               }
+            }
+         }
+         .extra {
+            margin-top: 30px;
+            span {
+               font-size: 31px;
+            }
+         }
       }
    }
 

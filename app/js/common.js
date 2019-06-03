@@ -170,23 +170,24 @@ $(window).on('load', function () {
        if (scrollTop > headerHeight) {
           $('.top-wrap').addClass('fixed-active');
 
-          if ($(window).width() > 1199) {
-             if (ticket.is(":hidden")) {
-                ticket.stop().css({
-                   'display': 'flex',
-                   'top': menuHeight + 'px'
-                }).hide().fadeIn(300);
-             }
-          }
+          // if ($(window).width() > 1199) {
+          //    if (ticket.is(":hidden")) {
+          //       ticket.stop().css({
+          //          'display': 'flex',
+          //          'top': menuHeight + 'px'
+          //       }).hide().fadeIn(300);
+          //    }
+          // }
        }
 
        if (scrollTop < headerHeight) {
           $('.top-wrap').removeClass('fixed-active');
-          if ($(window).width() > 1199) {
-             if (ticket.is(":visible")) {
-                ticket.fadeOut(300);
-             }
-          }
+
+          // if ($(window).width() > 1199) {
+          //    if (ticket.is(":visible")) {
+          //       ticket.fadeOut(300);
+          //    }
+          // }
        }
 
        $(window).on('scroll', function () {
@@ -200,23 +201,24 @@ $(window).on('load', function () {
           if (scrollTop > headerHeight) {
              $('.top-wrap').addClass('fixed-active');
 
-             if ($(window).width() > 1199) {
-                if (ticket.is(":hidden")) {
-                   ticket.stop().css({
-                      'display': 'flex',
-                      'top': menuHeight + 'px'
-                   }).hide().fadeIn(300);
-                }
-             }
+             // if ($(window).width() > 1199) {
+             //    if (ticket.is(":hidden")) {
+             //       ticket.stop().css({
+             //          'display': 'flex',
+             //          'top': menuHeight + 'px'
+             //       }).hide().fadeIn(300);
+             //    }
+             // }
           }
 
           if (scrollTop < headerHeight) {
              $('.top-wrap').removeClass('fixed-active');
-             if ($(window).width() > 1199) {
-                if (ticket.is(":visible")) {
-                   ticket.fadeOut(300);
-                }
-             }
+
+             // if ($(window).width() > 1199) {
+             //    if (ticket.is(":visible")) {
+             //       ticket.fadeOut(300);
+             //    }
+             // }
           }
 
        });
@@ -255,20 +257,20 @@ $(window).on('load', function () {
 
              if ((anchor.attr('href') == '#s-route')) {
                 $('html, body').stop().animate({
-                   scrollTop: totalHeight + 270
+                   scrollTop: totalHeight + 290
                 }, 800, 'swing');
              } else if ((anchor.attr('href') == '#s-price')) {
                 $('html, body').stop().animate({
-                   scrollTop: totalHeight + 60
+                   scrollTop: totalHeight + 350
                 }, 800, 'swing');
              } else if ((anchor.attr('href') == '#s-reviews')) {
                 $('html, body').stop().animate({
-                   scrollTop: totalHeight + 200
+                   scrollTop: totalHeight + 140
                 }, 800, 'swing');
              }
              else {
                 $('html, body').stop().animate({
-                   scrollTop: totalHeight
+                   scrollTop: totalHeight - 80
                 }, 800, 'swing');
              }
 
@@ -311,7 +313,7 @@ $(window).on('load', function () {
 
              if ((anchor.attr('href') == '#s-route')) {
                 $('html, body').stop().animate({
-                   scrollTop: totalHeight + 200
+                   scrollTop: totalHeight + 270
                 }, 800, 'swing');
              } else if ((anchor.attr('href') == '#s-price')) {
                 $('html, body').stop().animate({

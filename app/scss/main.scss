@@ -22,6 +22,7 @@ body {
    width: 100vw;
 
    &.thanks-page {
+      font-family: "IntroHeadH", sans-serif;
       .wrapper {
          display: flex;
          flex-direction: column;
@@ -79,12 +80,22 @@ body {
       }
 
       .extra {
+         margin-left: 70px;
          display: flex;
          flex-direction: column;
 
          span {
             font-size: 53px;
             color: $white;
+            &:nth-child(2) {
+               margin-left: 60px;
+            }
+            &:nth-child(3) {
+                margin-left: 110px;
+             }
+            &:nth-child(4) {
+               margin-left: 100px;
+            }
          }
       }
    }
@@ -1535,7 +1546,11 @@ header, section {
                font-weight: 500;
                text-transform: uppercase;
             }
-
+            .bonus {
+               span {
+                  display: block;
+               }
+            }
             span {
                color: #fff600;
             }
