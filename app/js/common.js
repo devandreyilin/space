@@ -230,7 +230,8 @@ $(window).on('load', function () {
        });
 
        $('#carousel-how').carousel({
-          interval: 3000
+          pause: true,
+          interval: false
        });
 
        $('#price-slider').carousel({
@@ -243,7 +244,7 @@ $(window).on('load', function () {
 //============= SCROLL TO SECTION (start) ==================
 
 
-       $('.header .top-wrap a[href^="#"]').on('click', function (e) {
+       $('.link-anchor').on('click', function (e) {
 
           var navHeight = $('.header .top-wrap').height() - $('.header .top-wrap .navbar-nav').height();
           var anchor = $(this),
@@ -258,20 +259,20 @@ $(window).on('load', function () {
              if ((anchor.attr('href') == '#s-route')) {
                 $('html, body').stop().animate({
                    scrollTop: totalHeight + 290
-                }, 800, 'swing');
+                }, 600, 'swing');
              } else if ((anchor.attr('href') == '#s-price')) {
                 $('html, body').stop().animate({
                    scrollTop: totalHeight + 350
-                }, 800, 'swing');
+                }, 600, 'swing');
              } else if ((anchor.attr('href') == '#s-reviews')) {
                 $('html, body').stop().animate({
                    scrollTop: totalHeight + 140
-                }, 800, 'swing');
+                }, 600, 'swing');
              }
              else {
                 $('html, body').stop().animate({
                    scrollTop: totalHeight - 80
-                }, 800, 'swing');
+                }, 600, 'swing');
              }
 
           }

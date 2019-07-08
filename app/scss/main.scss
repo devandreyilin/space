@@ -1825,19 +1825,20 @@ header, section {
 
 /*======================= FOOTER =========================*/
 .footer {
-   .seo {
-      padding: 50px 20px;
-
-      span {
-         font-weight: 700;
-      }
-   }
-
    .copyright {
       background-color: #333;
       margin-bottom: 0;
       color: #f3f3f3;
       padding: 40px 0;
+      text-align: center;
+      a {
+         display: inline-block;
+         color: inherit;
+         transition: .25s;
+         &:hover {
+            color: #ca4fe4;
+         }
+      }
    }
 }
 
